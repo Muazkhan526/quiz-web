@@ -1,4 +1,5 @@
 // Question 1
+<<<<<<< Updated upstream
 
 function findPair(numbers, target) {
   const seenNumbers = {};
@@ -44,6 +45,62 @@ console.log(findPair([1, 2, 3, 4], 5));
 
   let number = [1, 2, 3, 4, 5, 6];
   function filterEven(number) {
+=======
+
+let arr = ([1, 2, 3, 4],5);
+function findPair(number, target) {
+  let complement = new Set();
+  for (let i = 0; i < number.length; i++) {
+    if (complement.has(arr[i])) {
+      return [number[i], target - number[i]];
+    }
+    complement.add(target - number[i]);
+  } return null;
+}
+console.log(findPair(number, target));
+  
+  // Question 2
+
+  let str = "hello";
+  function reverseString(str) {
+      return str.split("").reverse().join("");
+    }
+    console.log(reverseString(str));
+    
+  // Question 3
+
+  let value = [1, 2, 3, 4];
+  function sumLargest(value) {
+    let largest = -Infinity;
+    let secondLargest = -Infinity;
+    for (let i = 0; i < value.length; i++) {
+      if (value[i] > largest) {
+        secondLargest = largest;
+        largest = value[i];
+      } else if (value[i] > secondLargest) {
+        secondLargest = value[i];
+      }
+    }return largest + secondLargest;
+  }
+  console.log(sumLargest(value));
+  
+  // Question 4
+
+  let name = ["hi", "hello", "hey", "howdy"];
+  function filterStrings(name) {
+    let filteredArr = [];
+    for (let i = 0; i < name.length; i++) {
+      if (name[i].length > 3) {
+        filteredArr.push(name[i]);
+      }
+    }return filteredArr;
+  }
+  console.log(filterStrings(name));
+    
+  // Question 5
+  let number = [1, 2, 3, 4, 5, 6];
+  function filterEvenNumbers(number) {
+>>>>>>> Stashed changes
     let filteredArr = [];
   
     for (let i = 0; i < number.length; i++) {
@@ -52,9 +109,13 @@ console.log(findPair([1, 2, 3, 4], 5));
       }
     }return filteredArr;
   }
+<<<<<<< Updated upstream
   console.log(filterEven(number));
   
   // Question 6
+=======
+  console.log(filterEvenNumbers(arr));
+>>>>>>> Stashed changes
 
   function pluck(arrayOfObjects, keyName) {
     const pluckedValues = arrayOfObjects.map(function(obj) {
